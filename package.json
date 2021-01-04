@@ -2,7 +2,7 @@
   "name": "towers-io",
   "version": "1.0.0",
   "description": "Towers of Hanoi js/jquery implementation, runs in browser",
-  "main": "index.js",
+  "private": true,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -20,5 +20,8 @@
   "devDependencies": {
     "webpack": "^5.11.1",
     "webpack-cli": "^4.3.1"
+  },
+  "dependencies": {
+    "lodash": "^4.17.20"
   }
 }
