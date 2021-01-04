@@ -19,6 +19,7 @@
   "homepage": "https://github.com/jasonmlutz/towers-io#readme",
   "devDependencies": {
     "css-loader": "^5.0.1",
+    "jquery": "^3.5.1",
     "style-loader": "^2.0.0",
     "webpack": "^5.11.1",
     "webpack-cli": "^4.3.1"
