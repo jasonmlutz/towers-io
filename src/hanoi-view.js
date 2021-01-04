@@ -7,11 +7,11 @@ class View {
     render()
   }
 
-  setupTowers() = {
+  setupTowers() {
     
   }
 
-  render() = {
+  render() {
 
   }
 }
