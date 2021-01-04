@@ -69,7 +69,7 @@ eval("// game.js\n\nclass Game {\n  constructor(height) {\n    let startTower = 
   \***************************/
 /***/ (() => {
 
-eval("// hanoi-view.js\n\n\n//# sourceURL=webpack://towers-io/./src/hanoi-view.js?");
+eval("throw new Error(\"Module parse failed: Unexpected token (10:16)\\nYou may need an appropriate loader to handle this file type, currently no loaders are configured to process this file. See https://webpack.js.org/concepts#loaders\\n|   }\\n| \\n>   setupTowers() = {\\n|     \\n|   }\");\n\n//# sourceURL=webpack://towers-io/./src/hanoi-view.js?");
 
 /***/ }),
 
