@@ -1,0 +1,24 @@
+{
+  "name": "towers-io",
+  "version": "1.0.0",
+  "description": "Towers of Hanoi js/jquery implementation, runs in browser",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jasonmlutz/towers-io.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jasonmlutz/towers-io/issues"
+  },
+  "homepage": "https://github.com/jasonmlutz/towers-io#readme",
+  "devDependencies": {
+    "webpack": "^5.11.1",
+    "webpack-cli": "^4.3.1"
+  }
+}
