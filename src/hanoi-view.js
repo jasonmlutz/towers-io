@@ -12,7 +12,7 @@ class View {
   setupTowers() {
     for (var i = 0; i < 3; i++) {
       var tower = $("<ul>")
-      tower.addClass(`tower${i}`);
+      tower.addClass(`tower tower${i}`);
       this.element.append(tower);
     }
   }
