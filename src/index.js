@@ -7,3 +7,8 @@ import View from './hanoi-view'
 const $main = $('.main');
 const game = new Game(5);
 const view = new View(game, $main);
+
+// add click event to towers
+$('.tower').click(function(event) {
+  event.target.classList.add('startTower')
+})
