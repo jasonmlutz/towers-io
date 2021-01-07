@@ -33,14 +33,18 @@ class View {
   }
 
   flagStartTower(event) {
-    var startTower
+    this.bubbleTowerEvent(event).addClass('startTower')
+  }
+
+  bubbleTowerEvent(event) {
+    var bubbledTarget
     var $target = $(event.target)
     if ($target.is("li")) {
-      startTower = $target.parent()
+      bubbledTarget = $target.parent()
     } else {
-      startTower = $target
+      bubbledTarget = $target
     }
-    startTower.addClass('startTower')
+    return bubbledTarget
   }
 
   flagEndTower(event) {
