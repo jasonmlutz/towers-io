@@ -18,10 +18,7 @@ class View {
   }
 
   render() {
-    // for each of the three towers
     for (var i = 0; i < 3; i++) {
-      // the tower is an array, entries are integers
-      // representing the widths of the discs
       this.game.towers[i].forEach(width => {
         var disc = $("<li>");
         disc.addClass('disc');
@@ -51,15 +48,11 @@ class View {
     const bubbledTarget = this.bubbleTowerEvent(event);
     if (bubbledTarget.hasClass('startTower')) {
       bubbledTarget.removeClass('startTower')
-      console.log('startTower de-selected')
     } else if (this.startTowerSelected()) {
       bubbledTarget.addClass('endTower')
-      console.log('endTower selected')
-      console.log('execute move')
       this.clearTowerFlags()
     } else {
       bubbledTarget.addClass('startTower')
-      console.log('startTower selected')
     }
   }
 
