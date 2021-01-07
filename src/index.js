@@ -11,13 +11,5 @@ const view = new View(game, $main);
 
 // add click event to towers
 $('ul.tower').click(function(event) {
-  view.flagStartTower(event)
+  view.towerSelection(event)
 })
-
-const testButton = $("<button>")
-testButton.addClass('clearTower')
-testButton.text('clearTower')
-testButton.click(function(event) {
-  view.clearTowerFlags()
-})
-$buttons.append(testButton)
