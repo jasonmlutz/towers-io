@@ -31,6 +31,22 @@ class View {
       });
     };
   }
+
+  flagStartTower(event) {
+    event.target.classlist.add('startTower')
+  }
+
+  flagEndTower(event) {
+    event.target.classList.add('endTower')
+  }
+
+  clearTowerFlags() {
+    const towers = $('.tower')
+    towers.forEach( function(tower) {
+      tower.removeClass('startTower')
+      tower.removeClass('endTower')
+    })
+  }
 }
 
 export default View
