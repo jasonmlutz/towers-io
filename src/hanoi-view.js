@@ -44,21 +44,28 @@ class View {
   }
 
   startTowerSelected() {
-    const towers = $('.tower')
-    towers.hasClass('startTower')
+    return $('.tower').hasClass('startTower')
   }
 
-  flagStartTower(event) {
-    this.bubbleTowerEvent(event).addClass('startTower')
-  }
-
-  flagEndTower(event) {
-    this.bubbleTowerEvent(event).addClass('endTower')
+  towerSelection(event) {
+    const bubbledTarget = this.bubbleTowerEvent(event);
+    if (bubbledTarget.hasClass('startTower')) {
+      bubbledTarget.removeClass('startTower')
+      console.log('startTower de-selected')
+    } else if (this.startTowerSelected()) {
+      bubbledTarget.addClass('endTower')
+      console.log('endTower selected')
+      console.log('execute move')
+      this.clearTowerFlags()
+    } else {
+      bubbledTarget.addClass('startTower')
+      console.log('startTower selected')
+    }
   }
 
   clearTowerFlags() {
     const towers = $('.tower')
-    towers.removeClass('startTower', 'endTower')
+    towers.removeClass('startTower endTower')
   }
 }
 
