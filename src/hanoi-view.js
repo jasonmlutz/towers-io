@@ -32,10 +32,6 @@ class View {
     };
   }
 
-  flagStartTower(event) {
-    this.bubbleTowerEvent(event).addClass('startTower')
-  }
-
   bubbleTowerEvent(event) {
     var bubbledTarget
     var $target = $(event.target)
@@ -47,8 +43,17 @@ class View {
     return bubbledTarget
   }
 
+  startTowerSelected() {
+    const towers = $('.tower')
+    towers.hasClass('startTower')
+  }
+
+  flagStartTower(event) {
+    this.bubbleTowerEvent(event).addClass('startTower')
+  }
+
   flagEndTower(event) {
-    event.target.classList.add('endTower')
+    this.bubbleTowerEvent(event).addClass('endTower')
   }
 
   clearTowerFlags() {
