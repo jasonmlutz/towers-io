@@ -33,7 +33,14 @@ class View {
   }
 
   flagStartTower(event) {
-    event.target.classlist.add('startTower')
+    var startTower
+    var $target = $(event.target)
+    if ($target.is("li")) {
+      startTower = $target.parent()
+    } else {
+      startTower = $target
+    }
+    startTower.addClass('startTower')
   }
 
   flagEndTower(event) {
@@ -42,10 +49,7 @@ class View {
 
   clearTowerFlags() {
     const towers = $('.tower')
-    towers.forEach( function(tower) {
-      tower.removeClass('startTower')
-      tower.removeClass('endTower')
-    })
+    towers.removeClass('startTower', 'endTower')
   }
 }
 
