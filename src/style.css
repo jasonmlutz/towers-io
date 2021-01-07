@@ -50,9 +50,9 @@ table {
 
 /* containers */
 
-.main {
+.main, .buttons {
   margin: auto;
-  width: 250px;
+  width: 300px;
   background-color: blue;
   padding: 30px;
   display: flex;
@@ -63,6 +63,7 @@ ul {
   list-style: square outside;
   padding: 10px 30px;
   flex-grow: 1;
+  flex-wrap: wrap;
 }
 
 /* towers */
