@@ -55,6 +55,10 @@ class View {
       this.game.move(...this.movePrep())
       this.render()
       this.clearTowerFlags()
+      if (this.game.isWon(this.game.height)) {
+        alert('you won!')
+        this.lock();
+      }
     } else {
       bubbledTarget.addClass('startTower')
     }
@@ -74,6 +78,10 @@ class View {
     const startTowerIdx = this.fetchTower('startTower')
     const endTowerIdx = this.fetchTower('endTower')
     return [parseInt(startTowerIdx), parseInt(endTowerIdx)]
+  }
+
+  lock() {
+    $('ul.tower').off('click')
   }
 }
 
