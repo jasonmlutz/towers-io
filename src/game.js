@@ -7,6 +7,7 @@ class Game {
       startTower.push(height-i);
     }
     this.towers = [startTower, [], []];
+    this.height = height
   }
 
   isValidMove(startTowerIdx, endTowerIdx) {
