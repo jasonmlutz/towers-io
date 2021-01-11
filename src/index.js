@@ -14,6 +14,7 @@ $buttons.append(heightInputButton)
 
 heightInputButton.click(function(event) {
   const game = new Game(parseInt(heightInput.val()))
+  $main.empty()
   const view = new View(game, $main);
   $('ul.tower').click(function(event) {
     view.towerSelection(event)
